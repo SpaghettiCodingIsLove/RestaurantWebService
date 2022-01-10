@@ -1,0 +1,31 @@
+<p>Lista dań</p>
+<body style="width: auto;">
+<table border="1" style="position: absolute; right: 25%;">
+	<tr>
+		<td></td>
+		<td style="padding: 5px;">
+		ID
+		</td>
+		<td style="padding: 5px;">
+		Nazwa
+		</td>
+		<td style="padding: 5px;">
+		Opis
+		</td>
+		
+	</tr>
+		<tr *ngFor="let item of data">
+		<td style="padding: 5px;"><button type="button">Usuń produkt</button></td>
+		<td style="text-align: center;">
+		{{item.id}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.name}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.description}}
+		</td>
+		
+	</tr>
+</table>
+</body>

@@ -1,0 +1,10 @@
+{
+    "/menu": {
+      "target": "https://restaurantpi.pythonanywhere.com/api/menu",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/menu": ""
+      }
+    }
+  }
