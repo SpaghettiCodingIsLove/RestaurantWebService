@@ -1,6 +1,8 @@
 <p>Lista dań</p>
 <body style="width: auto;">
-<table border="1" style="position: absolute; right: 25%;">
+<div><button type="button">Dania główne</button>&nbsp;&nbsp;<button type="button">Zupy</button></div>
+<div><br></div>
+<table border="1" style="position: absolute; right: 25%;" *ngIf="initialized">
 	<tr>
 		<td></td>
 		<td style="padding: 5px;">
@@ -12,6 +14,25 @@
 		<td style="padding: 5px;">
 		Opis
 		</td>
+		<td style="padding: 5px;">
+		Kaloryczność
+		</td>
+		<td style="padding: 5px;">
+		Cena
+		</td>
+		<td style="padding: 5px;">
+			Typ dania
+			</td>
+		<td style="padding: 5px;">
+		Alergeny
+		</td>
+		<td style="padding: 5px;">
+		Dostępność
+		</td>
+		<td style="padding: 5px;">
+		Transport
+		</td>
+
 		
 	</tr>
 		<tr *ngFor="let item of data">
@@ -25,7 +46,26 @@
 		<td style="padding: 5px;">
 		{{item.description}}
 		</td>
-		
+		<td style="padding: 5px;">
+		{{item.kcal}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.price}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.type}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.alergens}}
+		</td>	
+		<td style="padding: 5px;">
+		{{item.isAvailable}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.transport}}
+		</td>
+	
+
 	</tr>
 </table>
 </body>

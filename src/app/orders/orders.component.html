@@ -1,1 +1,78 @@
+
 <p>Lista zamówień</p>
+<body style="width: auto;">
+<table border="1" style="position: absolute; right: 25%;" *ngIf="initialized">
+	<tr>
+		<td></td>
+		<td style="padding: 5px;">
+		ID
+		</td>
+		<td style="padding: 5px;">
+		Id Klienta
+		</td>
+		<td style="padding: 5px;">
+		Zamówione jedzenie
+		</td>
+		<td style="padding: 5px;">
+            Miasto
+            </td>
+            <td style="padding: 5px;">
+            Ulica
+            </td>
+            <td style="padding: 5px;">
+            Numer domu
+            </td>
+            <td style="padding: 5px;">
+                Numer mieszkania
+                </td>
+            <td style="padding: 5px;">
+                Cena
+                </td>
+                <td style="padding: 5px;">
+                Czas zamówienia
+                </td>
+                <td style="padding: 5px;">
+                Status
+                </td>
+
+		
+	</tr>
+		<tr *ngFor="let item of data">
+		<td style="padding: 5px;"><button type="button">Usuń zamówienie</button></td>
+		<td style="text-align: center;">
+		{{item.id}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.user_id}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.ordered_food}}
+		</td>
+        <td style="text-align: center;">
+            {{item.city}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.street}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.housenumber}}
+            </td>
+            <td style="text-align: center;">
+                {{item.flatnumber}}
+                </td>
+                <td style="padding: 5px;">
+                {{item.price}}
+                </td>
+                <td style="padding: 5px;">
+                {{item.time}}
+                </td>		<td style="text-align: center;">
+                    {{item.status}}
+                    </td>
+    
+	
+
+	
+
+	</tr>
+</table>
+</body>

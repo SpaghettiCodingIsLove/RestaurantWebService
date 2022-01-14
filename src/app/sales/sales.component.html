@@ -1,3 +1,68 @@
-<div>
+
     <p>Lista promocji</p>
-</div>
+    
+    <body style="width: auto;">
+    <table border="1" style="position: absolute; right: 45%;" *ngIf="initialized">
+        <tr>
+            <td></td>
+            <td style="padding: 5px;">
+            ID
+            </td>
+            <td style="padding: 5px;">
+            Opis
+            </td>
+            <td style="padding: 5px;">
+            Id menu
+            </td>
+            <td style="padding: 5px;">
+            Wymagania
+            </td>
+            <td style="padding: 5px;">
+            Data ważności
+            </td>
+            <td style="padding: 5px;">
+            Kod
+            </td>
+            <td style="padding: 5px;">
+                Wartość
+                </td>
+                <td style="padding: 5px;">
+                Czy aktywny
+                </td>
+    
+    
+            
+        </tr>
+            <tr *ngFor="let item of data">
+            <td style="padding: 5px;"><button type="button">Usuń promocje</button></td>
+            <td style="text-align: center;">
+            {{item.id}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.description}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.menuid}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.condition}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.enddate}}
+            </td>
+            <td style="padding: 5px;">
+            {{item.code}}
+            </td>
+            <td style="padding: 5px;">
+                {{item.value}}
+                </td>
+                <td style="padding: 5px;">
+                {{item.isActive}}
+                </td>
+    
+        
+    
+        </tr>
+    </table>
+    </body>
+    

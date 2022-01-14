@@ -7,7 +7,11 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class ApiServiceService {
 
-  private SERVER: string = "https://restaurantpi.pythonanywhere.com/api/menu";
+  private SERVERMenu: string = "https://restaurantpi.pythonanywhere.com/api/menu";
+  private SERVEROrders: string = "https://restaurantpi.pythonanywhere.com/api/orders";
+  private SERVERSales: string = "https://restaurantpi.pythonanywhere.com/api/sale";
+  private SERVERReservations: string = "https://restaurantpi.pythonanywhere.com/api/reservations";
+  private SERVERTables: string = "https://restaurantpi.pythonanywhere.com/api/tables";
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
@@ -17,11 +21,30 @@ export class ApiServiceService {
   };
   constructor(private http: HttpClient) { }
 
-  getData()
+  getMenuData()
   {
-	  return this.http.get(this.SERVER);
+	  return this.http.get(this.SERVERMenu);
+  }
+
+  getOrderData()
+  {
+	  return this.http.get(this.SERVEROrders);
   }
   
+  getSalesData()
+  {
+	  return this.http.get(this.SERVERSales);
+  }
+
+  getReservationsData()
+  {
+	  return this.http.get(this.SERVERReservations);
+  }
+
+  getTablessData()
+  {
+	  return this.http.get(this.SERVERTables);
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

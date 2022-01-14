@@ -1,1 +1,53 @@
 <p>Lista rezerwacji</p>
+<body style="width: auto;">
+<table border="1" style="position: absolute; right: 45%;" *ngIf="initialized">
+	<tr>
+		<td></td>
+		<td style="padding: 5px;">
+		ID
+		</td>
+		<td style="padding: 5px;">
+		Id Klienta
+		</td>
+		<td style="padding: 5px;">
+		Numer stolika
+		</td>
+		<td style="padding: 5px;">
+		Data
+		</td>
+		<td style="padding: 5px;">
+		ilość gości
+		</td>
+		<td style="padding: 5px;">
+		Status
+		</td>
+
+
+		
+	</tr>
+		<tr *ngFor="let item of data">
+		<td style="padding: 5px;"><button type="button">Usuń rezerwacje</button></td>
+		<td style="text-align: center;">
+		{{item.id}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.userid}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.tablenumber}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.date}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.numofguests}}
+		</td>
+		<td style="padding: 5px;">
+		{{item.status}}
+		</td>
+
+	
+
+	</tr>
+</table>
+</body>
