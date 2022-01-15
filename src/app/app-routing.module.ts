@@ -4,6 +4,8 @@ import { MenuComponent } from './menu/menu.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ReservationsComponent } from './reservations/reservations.component';
 import { SalesComponent } from './sales/sales.component';
+import { TablesComponent } from './tables/tables.component';
+
 
 const routes: Routes = [
   {
@@ -21,7 +23,13 @@ const routes: Routes = [
   {
     path: 'reservations',
     component: ReservationsComponent
-  }
+  },
+  {
+    path: 'tables',
+    component: TablesComponent
+  },
+
+
 ];
 
 @NgModule({

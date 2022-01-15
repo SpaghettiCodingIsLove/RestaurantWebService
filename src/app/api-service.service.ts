@@ -77,7 +77,7 @@ export class ApiServiceService {
 	  return this.http.get(this.SERVERReservations);
   }
 
-  getTablessData()
+  getTablesData()
   {
 	  return this.http.get(this.SERVERTables);
   }
