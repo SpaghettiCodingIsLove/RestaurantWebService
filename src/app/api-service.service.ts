@@ -22,6 +22,7 @@ export class ApiServiceService {
   private SERVERReservations: string = "https://restaurantpi.pythonanywhere.com/api/reservations";
   private SERVERReservations2: string = "https://restaurantpi.pythonanywhere.com/api/reservations/cancel/";
   private SERVERTables: string = "https://restaurantpi.pythonanywhere.com/api/tables";
+  private SERVERSales3: string = "https://restaurantpi.pythonanywhere.com/api/sale/add";
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
@@ -105,6 +106,10 @@ export class ApiServiceService {
     return this.http.put(url, id)
   }
 
+  postAddSale(sale:any){
+    
+    return this.http.post(this.SERVERSales3, sale)
+  }
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       console.error('An error occurred:', error.error);
@@ -115,4 +120,5 @@ export class ApiServiceService {
     return throwError(
       'Something bad happened; please try again later.');
   }
+
 }

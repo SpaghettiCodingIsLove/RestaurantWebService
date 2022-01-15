@@ -69,13 +69,13 @@
 </div>
 <div id="addMenu">
 <h1>Dodaj promocję</h1>
-<div class='inputField'><p>Opis promocji</p><input type="text" id="description"/></div>
-<div class='inputField'><p>Id menu</p><input type="number" id="menuid"/></div>
-<div class='inputField'><p>Wymagania</p><input type="number" id="condition"/></div>
-<div class='inputField'><p>Data końcowa</p><input type="datetime" id="enddate"/></div>
-<div class='inputField'><p>Kod</p><input type="text" id="code"/></div>
-<div class='inputField'><p>Wartość przeceny</p><input type="number" id="value"/></div>
-<button mat-stroked-button color="basic">Dodaj przecenę</button>
+<div class='inputField'><p>Opis promocji</p><input name="description" (change)="descriptionChanged($event)" type="text" id="description" #description/></div>
+<div class='inputField'><p>Id menu</p><input name="menuid" type="number" (change)="menuidChanged($event)" min="0" id="menuid" #menuid/></div>
+<div class='inputField'><p>Wymagania</p><input name="condition" type="number" (change)="conditionChanged($event)" min="0" id="condition" #condition/></div>
+<div class='inputField'><p>Data końcowa</p><input name="enddate" type="datetime-local" (change)="enddateChanged($event)" id="enddate" #enddate/></div>
+<div class='inputField'><p>Kod</p><input type="text" name="code" id="code" (change)="codeChanged($event)" #code/></div>
+<div class='inputField'><p>Wartość przeceny</p><input name="value1" type="number" (change)="valueChanged($event)" step="0.01" min="0.01" max="0.99" id="value1" #value1/></div>
+<button mat-stroked-button color="basic" (click)="addSale(description.value, menuid.value, condition.value, enddate.value, code.value, value1.value)" >Dodaj przecenę</button>
 
 </div>
     </body>
