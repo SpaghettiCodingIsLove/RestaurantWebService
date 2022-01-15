@@ -1,16 +1,16 @@
 <p>Lista dań</p>
 <body style="width: auto;">
-<div><button type="button" (click)="filterData1()">Przystawki</button>&nbsp;&nbsp;
-	<button type="button" (click)="filterData2()">Zupy</button>&nbsp;&nbsp;
-	<button type="button" (click)="filterData3()">Danie główne</button>&nbsp;&nbsp;
-	<button type="button" (click)="filterData4()">Sałatki</button>&nbsp;&nbsp;
-	<button type="button" (click)="filterData5()">Desery</button>&nbsp;&nbsp;
-	<button type="button" (click)="filterData6()">Napoje gorące</button>&nbsp;&nbsp;
-	<button type="button" (click)="filterData7()">Napoje zimne</button>&nbsp;&nbsp;
-	<button type="button" (click)="ngOnInit()">Całe menu</button>&nbsp;&nbsp;
+<div class="tab"><button type="button" (click)="filterData1()">Przystawki</button>
+	<button type="button" class='tablinks' (click)="filterData2()">Zupy</button>
+	<button type="button" class='tablinks' (click)="filterData3()">Danie główne</button>
+	<button type="button" class='tablinks' (click)="filterData4()">Sałatki</button>
+	<button type="button" class='tablinks' (click)="filterData5()">Desery</button>
+	<button type="button" class='tablinks' (click)="filterData6()">Napoje gorące</button>
+	<button type="button" class='tablinks' (click)="filterData7()">Napoje zimne</button>
+	<button type="button" class='tablinks' (click)="ngOnInit()">Całe menu</button>
 	</div>
 <div><br></div>
-<div></div>
+<div><button type="button">Dodaj produkt</button></div>
 <div><br></div>
 <table border="1" style="position: absolute; right: 35%;" *ngIf="initialized">
 	<tr>
