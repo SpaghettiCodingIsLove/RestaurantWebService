@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiServiceService } from '../api-service.service';
 import { Menu } from '../classes/menu';
+
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
@@ -22,6 +23,14 @@ export class SalesComponent implements OnInit {
       this.initialized=true;
     })
   }
+cancelSale(id:any){
+this.api.putCancelSale(id).subscribe(data=>{
+  console.warn(data);
+  this.data=data;
+  this.ngOnInit()
+})
+}
+
 
 }
 

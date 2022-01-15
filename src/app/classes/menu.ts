@@ -40,3 +40,14 @@ transport: string;
 image: string;
 
 }
+
+export interface Sale{
+    id:string;
+description:string;
+menuid: string;
+condition: string;
+enddate: string;
+code: string;
+value: string;
+isActive:boolean;
+}

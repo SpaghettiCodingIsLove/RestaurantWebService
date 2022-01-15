@@ -23,4 +23,19 @@ export class ReservationsComponent implements OnInit {
     })
   }
 
+  cancelReservation(id:any, status:any){
+    if(status!='Anulowano'){
+      this.api.putCancelReservation(id).subscribe(data=>{
+        console.warn(data);
+        this.data=data;
+        this.ngOnInit()
+        
+    })
+    
+  }
+  else{
+alert("Rezerwacja jest już anulowana");
+  }
+  }
+
 }

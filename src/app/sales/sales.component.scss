@@ -1,3 +1,59 @@
 p{
-    padding-top: 50px;
+    padding-top: 10px;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#addMenu{
+    height: 100%;
+    width: 50%;
+    float: right;
+    display: block;
+}
+
+#menuList{
+    height: 100%;
+    width: 40%;
+    float:left;
+   
+}
+
+.inputField{
+    width: 100%;
+    height: 30px;
+    float:left;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.inputField p{
+    width: 40%;
+    float:left;
+    height:100%;
+    font-size: medium;
+    text-align: right;
+}
+
+.inputField input{
+    width: 50%;
+    float:left;
+    margin-left: 10px;
+    height:100%;
+    font-size: medium;
+    
+}
+
+h1{
+    width: 100%;
+    
+    float:left;
+    text-align: center;
+}
+
+#addMenu button {
+float: right;
+margin-right: 40%;
+width: 20%;
 }

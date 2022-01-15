@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders  } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { OrderData,Food } from './classes/menu';
+import { OrderData,Food, Sale } from './classes/menu';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,8 +16,11 @@ export class ApiServiceService {
   private SERVERMenu7: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Napoje Gorące";
   private SERVERMenu8: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Napoje zimne";
   private SERVEROrders: string = "https://restaurantpi.pythonanywhere.com/api/orders";
+  private SERVEROrders2: string = "https://restaurantpi.pythonanywhere.com/api/orders/update/";
   private SERVERSales: string = "https://restaurantpi.pythonanywhere.com/api/sale";
+  private SERVERSales2: string = "https://restaurantpi.pythonanywhere.com/api/sale/cancel/";
   private SERVERReservations: string = "https://restaurantpi.pythonanywhere.com/api/reservations";
+  private SERVERReservations2: string = "https://restaurantpi.pythonanywhere.com/api/reservations/cancel/";
   private SERVERTables: string = "https://restaurantpi.pythonanywhere.com/api/tables";
   private httpOptions = {
     headers: new HttpHeaders({
@@ -80,6 +83,26 @@ export class ApiServiceService {
   getTablesData()
   {
 	  return this.http.get(this.SERVERTables);
+  }
+
+  putCancelSale(id:any)
+  {
+  
+    var url=this.SERVERSales2+id
+    return this.http.put(url, id)
+  }
+
+  putCancelReservation(id:any)
+  {
+  
+    var url=this.SERVERReservations2+id
+    return this.http.put(url, id)
+  }
+
+  putUpdateOrder(id:any, status:any){
+    var url=this.SERVEROrders2+id+"?status="+status
+
+    return this.http.put(url, id)
   }
 
   private handleError(error: HttpErrorResponse) {

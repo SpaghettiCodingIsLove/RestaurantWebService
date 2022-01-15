@@ -1,10 +1,8 @@
 
     <div style="padding-top: 75px; margin-left: 20px;">
-        <button mat-raised-button color="basic">Dodaj promocję</button>
-        
-        </div>
-    <div><br></div>
-    <body style="width: auto;">
+
+    <body>
+        <div id="menuList">
     <table border="1" style="margin-left: auto;
     margin-right: auto;" *ngIf="initialized">
         <tr>
@@ -37,8 +35,8 @@
     
             
         </tr>
-            <tr *ngFor="let item of data">
-            <td style="padding: 5px;"><button mat-stroked-button color="basic" >Usuń promocje</button></td>
+            <tr *ngFor="let item of data;">
+            <td style="padding: 5px;"><button id="{{item.id}}" mat-stroked-button color="basic" (click)="cancelSale(item.id)" >Usuń promocje</button></td>
             <td style="text-align: center;">
             {{item.id}}
             </td>
@@ -68,5 +66,17 @@
     
         </tr>
     </table>
+</div>
+<div id="addMenu">
+<h1>Dodaj promocję</h1>
+<div class='inputField'><p>Opis promocji</p><input type="text" id="description"/></div>
+<div class='inputField'><p>Id menu</p><input type="number" id="menuid"/></div>
+<div class='inputField'><p>Wymagania</p><input type="number" id="condition"/></div>
+<div class='inputField'><p>Data końcowa</p><input type="datetime" id="enddate"/></div>
+<div class='inputField'><p>Kod</p><input type="text" id="code"/></div>
+<div class='inputField'><p>Wartość przeceny</p><input type="number" id="value"/></div>
+<button mat-stroked-button color="basic">Dodaj przecenę</button>
+
+</div>
     </body>
     

@@ -26,7 +26,7 @@ margin-right: auto;" *ngIf="initialized">
 		
 	</tr>
 		<tr *ngFor="let item of data">
-		<td style="padding: 5px;"><button mat-stroked-button color="basic">Usuń rezerwacje</button></td>
+		<td style="padding: 5px;"><button id="{{item.id}}" mat-stroked-button color="basic" (click)="cancelReservation(item.id, item.status)" >Usuń rezerwacje</button></td>
 		<td style="text-align: center;">
 		{{item.id}}
 		</td>

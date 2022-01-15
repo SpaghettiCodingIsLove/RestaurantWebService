@@ -38,7 +38,7 @@ margin-right: auto;" *ngIf="initialized">
 	</tr>
 		<tr *ngFor="let item of orderData; let i = index;">
 		<td style="padding: 5px;white-space: nowrap; width: 1%;">
-            <button mat-stroked-button color="basic">Zmień status</button>
+            <button mat-stroked-button color="basic" (click)="changeStatus(item.id,item.status)">Zmień status</button>
         </td>
 		<td style="text-align: center;white-space: nowrap; width: 1%;">
 		{{item.id}}
@@ -78,4 +78,6 @@ margin-right: auto;" *ngIf="initialized">
 
 	</tr>
 </table>
+
+
 </body>
