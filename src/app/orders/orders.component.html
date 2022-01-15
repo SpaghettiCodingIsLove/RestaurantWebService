@@ -1,7 +1,7 @@
 
 <p>Lista zamówień</p>
 <body style="width: auto;">
-<table border="1" style="position: absolute;" *ngIf="initialized">
+<table border="1" style="position: absolute;right: 40%;" *ngIf="initialized">
 	<tr>
 		<td></td>
 		<td style="padding: 5px;">
@@ -38,22 +38,22 @@
 		
 	</tr>
 		<tr *ngFor="let item of orderData; let i = index;">
-		<td style="padding: 5px;"><button type="button">Usuń zamówienie</button></td>
-		<td style="text-align: center;">
+		<td style="padding: 5px;white-space: nowrap; width: 1%;"><button type="button">Zmień status</button></td>
+		<td style="text-align: center;white-space: nowrap; width: 1%;">
 		{{item.id}}
 		</td>
 		<td style="padding: 5px;text-align: center;white-space: nowrap; width: 1%;">
 		{{item.user_id}}
 		</td>
-		<td style="padding: 5px;">
+		<td style="padding: 5px; white-space: nowrap; width: 1%;">
             
             <li *ngFor="let item of orderData[i]?.ordered_food;">{{item.name}}</li>
         
 		</td>
-        <td style="text-align: center;">
+        <td style="text-align: center;white-space: nowrap; width: 1%;">
             {{item.city}}
             </td>
-            <td style="padding: 5px;text-align: center;">
+            <td style="padding: 5px;text-align: center;white-space: nowrap; width: 1%;">
             {{item.street}}
             </td>
             <td style="padding: 5px;text-align: center;white-space: nowrap; width: 1%;">
@@ -62,12 +62,12 @@
             <td style="text-align: center;white-space: nowrap; width: 1%;">
                 {{item.flatnumber}}
                 </td>
-                <td style="padding: 5px;">
+                <td style="padding: 5px;white-space: nowrap; width: 1%;">
                 {{item.price}} pln
                 </td>
-                <td style="padding: 5px;">
+                <td style="padding: 5px;white-space: nowrap; width: 1%;">
                 {{item.time}}
-                </td>		<td style="text-align: center;">
+                </td>		<td style="text-align: center;white-space: nowrap; width: 1%;">
                     {{item.status}}
                     </td>
     

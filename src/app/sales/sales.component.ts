@@ -22,7 +22,7 @@ export class SalesComponent implements OnInit {
       this.initialized=true;
     })
   }
-deleteSale(){
-  
+
 }
-}
+
+

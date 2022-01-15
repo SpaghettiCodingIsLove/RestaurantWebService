@@ -10,6 +10,11 @@ export class ApiServiceService {
   private SERVERMenu: string = "https://restaurantpi.pythonanywhere.com/api/menu";
   private SERVERMenu2: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Zupy";
   private SERVERMenu3: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Danie główne";
+  private SERVERMenu4: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Przystawki";
+  private SERVERMenu5: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Sałatki";
+  private SERVERMenu6: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Desery";
+  private SERVERMenu7: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Napoje Gorące";
+  private SERVERMenu8: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Napoje zimne";
   private SERVEROrders: string = "https://restaurantpi.pythonanywhere.com/api/orders";
   private SERVERSales: string = "https://restaurantpi.pythonanywhere.com/api/sale";
   private SERVERReservations: string = "https://restaurantpi.pythonanywhere.com/api/reservations";
@@ -35,6 +40,26 @@ export class ApiServiceService {
   {
 	  return this.http.get(this.SERVERMenu3);
   }
+  getMenu4Data()
+  {
+	  return this.http.get(this.SERVERMenu4);
+  }
+  getMenu5Data()
+  {
+	  return this.http.get(this.SERVERMenu5);
+  }
+  getMenu6Data()
+  {
+	  return this.http.get(this.SERVERMenu6);
+  }
+  getMenu7Data()
+  {
+	  return this.http.get(this.SERVERMenu7);
+  }
+  getMenu8Data()
+  {
+	  return this.http.get(this.SERVERMenu8);
+  }
 
   getOrderData()
   {
@@ -45,6 +70,7 @@ export class ApiServiceService {
   {
 	  return this.http.get(this.SERVERSales);
   }
+
 
   getReservationsData()
   {

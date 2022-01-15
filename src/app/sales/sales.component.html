@@ -2,7 +2,7 @@
     <p>Lista promocji</p>
     
     <body style="width: auto;">
-    <table border="1" style="position: absolute; right: 30%;" *ngIf="initialized">
+    <table border="1" style="position: absolute; right: 45%;" *ngIf="initialized">
         <tr>
             <td></td>
             <td style="padding: 5px;">
@@ -34,7 +34,7 @@
             
         </tr>
             <tr *ngFor="let item of data">
-            <td style="padding: 5px;"><button type="button">Usuń promocje</button></td>
+            <td style="padding: 5px;"><button type="button" >Usuń promocje</button></td>
             <td style="text-align: center;">
             {{item.id}}
             </td>

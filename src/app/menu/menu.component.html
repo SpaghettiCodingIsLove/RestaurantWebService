@@ -1,10 +1,20 @@
 <p>Lista dań</p>
 <body style="width: auto;">
-<div><button type="button" (click)="filterData2()">Dania główne</button>&nbsp;&nbsp;<button type="button" (click)="filterData1()">Zupy</button>&nbsp;&nbsp;<button type="button" (click)="ngOnInit()">Całe menu</button></div>
+<div><button type="button" (click)="filterData1()">Przystawki</button>&nbsp;&nbsp;
+	<button type="button" (click)="filterData2()">Zupy</button>&nbsp;&nbsp;
+	<button type="button" (click)="filterData3()">Danie główne</button>&nbsp;&nbsp;
+	<button type="button" (click)="filterData4()">Sałatki</button>&nbsp;&nbsp;
+	<button type="button" (click)="filterData5()">Desery</button>&nbsp;&nbsp;
+	<button type="button" (click)="filterData6()">Napoje gorące</button>&nbsp;&nbsp;
+	<button type="button" (click)="filterData7()">Napoje zimne</button>&nbsp;&nbsp;
+	<button type="button" (click)="ngOnInit()">Całe menu</button>&nbsp;&nbsp;
+	</div>
 <div><br></div>
-<table border="1" style="position: absolute; right: 25%;" *ngIf="initialized">
+<div></div>
+<div><br></div>
+<table border="1" style="position: absolute; right: 35%;" *ngIf="initialized">
 	<tr>
-		<td></td>
+		
 		<td style="padding: 5px;">
 		ID
 		</td>
@@ -36,7 +46,6 @@
 		
 	</tr>
 		<tr *ngFor="let item of data">
-		<td style="padding: 5px;"><button type="button">Usuń produkt</button></td>
 		<td style="text-align: center;">
 		{{item.id}}
 		</td>

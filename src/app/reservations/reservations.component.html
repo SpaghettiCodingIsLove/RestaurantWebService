@@ -1,6 +1,6 @@
 <p>Lista rezerwacji</p>
 <body style="width: auto;">
-<table border="1" style="position: absolute; right: 45%;" *ngIf="initialized">
+<table border="1" style="position: absolute; right: 50%;left: 0%" *ngIf="initialized">
 	<tr>
 		<td></td>
 		<td style="padding: 5px;">
@@ -16,7 +16,7 @@
 		Data
 		</td>
 		<td style="padding: 5px;">
-		ilość gości
+		Ilość gości
 		</td>
 		<td style="padding: 5px;">
 		Status
@@ -30,16 +30,16 @@
 		<td style="text-align: center;">
 		{{item.id}}
 		</td>
-		<td style="padding: 5px;">
+		<td style="padding: 5px;text-align: center;">
 		{{item.userid}}
 		</td>
-		<td style="padding: 5px;">
+		<td style="padding: 5px;text-align: center;">
 		{{item.tablenumber}}
 		</td>
 		<td style="padding: 5px;">
 		{{item.date}}
 		</td>
-		<td style="padding: 5px;">
+		<td style="padding: 5px;text-align: center;">
 		{{item.numofguests}}
 		</td>
 		<td style="padding: 5px;">
