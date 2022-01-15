@@ -1,14 +1,5 @@
 <body style="width: auto;">
-<<<<<<< Updated upstream
-<div class="tab"><button type="button" (click)="filterData1()">Przystawki</button>
-	<button type="button" class='tablinks' (click)="filterData2()">Zupy</button>
-	<button type="button" class='tablinks' (click)="filterData3()">Danie główne</button>
-	<button type="button" class='tablinks' (click)="filterData4()">Sałatki</button>
-	<button type="button" class='tablinks' (click)="filterData5()">Desery</button>
-	<button type="button" class='tablinks' (click)="filterData6()">Napoje gorące</button>
-	<button type="button" class='tablinks' (click)="filterData7()">Napoje zimne</button>
-	<button type="button" class='tablinks' (click)="ngOnInit()">Całe menu</button>
-=======
+
 <div style="padding-top: 75px; margin-left: 15%; margin-right: 15%;"> 
 	<button mat-raised-button (click)="filterData1()">Przystawki</button>&nbsp;&nbsp;
 	<button mat-raised-button (click)="filterData2()">Zupy</button>&nbsp;&nbsp;
@@ -18,10 +9,10 @@
 	<button mat-raised-button (click)="filterData6()">Napoje gorące</button>&nbsp;&nbsp;
 	<button mat-raised-button (click)="filterData7()">Napoje zimne</button>&nbsp;&nbsp;
 	<button mat-raised-button (click)="ngOnInit()">Całe menu</button>&nbsp;&nbsp;
->>>>>>> Stashed changes
+
 	</div>
 <div><br></div>
-<div><button type="button">Dodaj produkt</button></div>
+<div><button mat-raised-button style="margin-left: 5%;">Dodaj produkt</button></div>
 <div><br></div>
 <table border="1" style="margin-left: auto;
 margin-right: auto;" *ngIf="initialized">
