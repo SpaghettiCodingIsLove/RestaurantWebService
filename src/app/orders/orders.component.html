@@ -1,7 +1,7 @@
 
 <p>Lista zamówień</p>
 <body style="width: auto;">
-<table border="1" style="position: absolute; right: 25%;" *ngIf="initialized">
+<table border="1" style="position: absolute;" *ngIf="initialized">
 	<tr>
 		<td></td>
 		<td style="padding: 5px;">
@@ -37,31 +37,33 @@
 
 		
 	</tr>
-		<tr *ngFor="let item of data">
+		<tr *ngFor="let item of orderData; let i = index;">
 		<td style="padding: 5px;"><button type="button">Usuń zamówienie</button></td>
 		<td style="text-align: center;">
 		{{item.id}}
 		</td>
-		<td style="padding: 5px;">
+		<td style="padding: 5px;text-align: center;white-space: nowrap; width: 1%;">
 		{{item.user_id}}
 		</td>
 		<td style="padding: 5px;">
-		{{item.ordered_food}}
+            
+            <li *ngFor="let item of orderData[i]?.ordered_food;">{{item.name}}</li>
+        
 		</td>
         <td style="text-align: center;">
             {{item.city}}
             </td>
-            <td style="padding: 5px;">
+            <td style="padding: 5px;text-align: center;">
             {{item.street}}
             </td>
-            <td style="padding: 5px;">
+            <td style="padding: 5px;text-align: center;white-space: nowrap; width: 1%;">
             {{item.housenumber}}
             </td>
-            <td style="text-align: center;">
+            <td style="text-align: center;white-space: nowrap; width: 1%;">
                 {{item.flatnumber}}
                 </td>
                 <td style="padding: 5px;">
-                {{item.price}}
+                {{item.price}} pln
                 </td>
                 <td style="padding: 5px;">
                 {{item.time}}

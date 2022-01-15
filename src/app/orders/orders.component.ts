@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiServiceService } from '../api-service.service';
-import { Menu } from '../classes/menu';
+import { Menu, OrderData } from '../classes/menu';
 
 @Component({
   selector: 'app-orders',
@@ -10,7 +10,7 @@ import { Menu } from '../classes/menu';
 })
 export class OrdersComponent implements OnInit {
 
-  public data: any;
+  public orderData?: any;
   public food: any;
 	public initialized: boolean = false;  
 
@@ -20,11 +20,12 @@ export class OrdersComponent implements OnInit {
   ngOnInit(): void {
 	  this.api.getOrderData().subscribe(data=>{
       console.warn(data);
-      this.data=data;
+      this.orderData=data;
       this.initialized=true;
+      
     })
-  }
+  
 
 }
 
-
+}

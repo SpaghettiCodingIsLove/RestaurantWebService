@@ -21,7 +21,22 @@ export class MenuComponent implements OnInit {
       console.warn(data);
       this.data=data;
       this.initialized=true;
+      
     })
   }
+filterData1(){
+  this.api.getMenu2Data().subscribe(data=>{
+    console.warn(data);
+    this.data=data;
+    
+})
+}
 
+filterData2(){
+  this.api.getMenu3Data().subscribe(data=>{
+    console.warn(data);
+    this.data=data;
+    
+})
+}
 }

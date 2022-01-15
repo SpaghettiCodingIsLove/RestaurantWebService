@@ -1,6 +1,6 @@
 <p>Lista dań</p>
 <body style="width: auto;">
-<div><button type="button">Dania główne</button>&nbsp;&nbsp;<button type="button">Zupy</button></div>
+<div><button type="button" (click)="filterData2()">Dania główne</button>&nbsp;&nbsp;<button type="button" (click)="filterData1()">Zupy</button>&nbsp;&nbsp;<button type="button" (click)="ngOnInit()">Całe menu</button></div>
 <div><br></div>
 <table border="1" style="position: absolute; right: 25%;" *ngIf="initialized">
 	<tr>
@@ -60,9 +60,11 @@
 		</td>	
 		<td style="padding: 5px;">
 		{{item.isAvailable}}
+		
 		</td>
 		<td style="padding: 5px;">
 		{{item.transport}}
+		
 		</td>
 	
 
