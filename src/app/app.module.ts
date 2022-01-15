@@ -10,6 +10,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { TablesComponent } from './tables/tables.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+
 
 
 
@@ -25,6 +31,9 @@ import { TablesComponent } from './tables/tables.component';
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
+    MatTableModule,
+    MatToolbarModule,
     AppRoutingModule,
 	HttpClientModule,
   TranslateModule.forRoot({
@@ -33,7 +42,8 @@ import { TablesComponent } from './tables/tables.component';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
     }
-})
+}),
+  BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

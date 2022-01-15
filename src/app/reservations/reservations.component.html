@@ -1,6 +1,6 @@
-<p>Lista rezerwacji</p>
-<body style="width: auto;">
-<table border="1" style="position: absolute; right: 50%;left: 0%" *ngIf="initialized">
+<body style="width: auto;" style="padding-top: 75px;">
+<table border="1" style="margin-left: auto;
+margin-right: auto;" *ngIf="initialized">
 	<tr>
 		<td></td>
 		<td style="padding: 5px;">
@@ -26,7 +26,7 @@
 		
 	</tr>
 		<tr *ngFor="let item of data">
-		<td style="padding: 5px;"><button type="button">Usuń rezerwacje</button></td>
+		<td style="padding: 5px;"><button mat-stroked-button color="basic">Usuń rezerwacje</button></td>
 		<td style="text-align: center;">
 		{{item.id}}
 		</td>
