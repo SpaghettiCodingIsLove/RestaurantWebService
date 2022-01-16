@@ -22,4 +22,19 @@ export class TablesComponent implements OnInit {
     })
   }
 
+  addTable(){
+    var json = {
+      "capacity": (<HTMLInputElement>document.getElementById("capacity")).value,
+      "name": (<HTMLInputElement>document.getElementById("name")).value,
+      "location":(<HTMLInputElement>document.getElementById("location")).value
+
+    }
+    this.api.postAddTable(json).subscribe(data=>{
+      console.warn(data);
+      this.data=data;
+      this.initialized=true;
+      this.ngOnInit();
+    })
+
+}
 }

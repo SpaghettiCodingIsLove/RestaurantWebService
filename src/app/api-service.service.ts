@@ -15,6 +15,7 @@ export class ApiServiceService {
   private SERVERMenu6: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Desery";
   private SERVERMenu7: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Napoje Gorące";
   private SERVERMenu8: string = "https://restaurantpi.pythonanywhere.com/api/menu?type=Napoje zimne";
+  private SERVERMenu9: string = "https://restaurantpi.pythonanywhere.com/api/menu/add";
   private SERVEROrders: string = "https://restaurantpi.pythonanywhere.com/api/orders";
   private SERVEROrders2: string = "https://restaurantpi.pythonanywhere.com/api/orders/update/";
   private SERVERSales: string = "https://restaurantpi.pythonanywhere.com/api/sale";
@@ -22,6 +23,7 @@ export class ApiServiceService {
   private SERVERReservations: string = "https://restaurantpi.pythonanywhere.com/api/reservations";
   private SERVERReservations2: string = "https://restaurantpi.pythonanywhere.com/api/reservations/cancel/";
   private SERVERTables: string = "https://restaurantpi.pythonanywhere.com/api/tables";
+  private SERVERTables2: string = "https://restaurantpi.pythonanywhere.com/api/table/add";
   private SERVERSales3: string = "https://restaurantpi.pythonanywhere.com/api/sale/add";
   private httpOptions = {
     headers: new HttpHeaders({
@@ -109,6 +111,14 @@ export class ApiServiceService {
   postAddSale(sale:any){
     
     return this.http.post(this.SERVERSales3, sale)
+  }
+  postAddProduct(food:any){
+    
+    return this.http.post(this.SERVERMenu9, food)
+  }
+
+  postAddTable(table:any){
+    return this.http.post(this.SERVERTables2, table)
   }
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

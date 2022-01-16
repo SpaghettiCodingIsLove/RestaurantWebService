@@ -1,8 +1,8 @@
 <body style="width: auto;" style="padding-top: 75px;">
-<table border="1" style="margin-left: auto;
-margin-right: auto;" *ngIf="initialized">
+<table border="1" style="margin-left: 30px;
+margin-right: 30px;" *ngIf="initialized">
 	<tr>
-		<td></td>
+		
 		<td style="padding: 5px;">
 		ID
 		</td>
@@ -33,13 +33,11 @@ margin-right: auto;" *ngIf="initialized">
                 <td style="padding: 5px;">
                 Status
                 </td>
-
+                <td></td>
 		
 	</tr>
 		<tr *ngFor="let item of orderData; let i = index;">
-		<td style="padding: 5px;white-space: nowrap; width: 1%;">
-            <button mat-stroked-button color="basic" (click)="changeStatus(item.id,item.status)">Zmień status</button>
-        </td>
+
 		<td style="text-align: center;white-space: nowrap; width: 1%;">
 		{{item.id}}
 		</td>
@@ -63,15 +61,17 @@ margin-right: auto;" *ngIf="initialized">
             <td style="text-align: center;white-space: nowrap; width: 1%;">
                 {{item.flatnumber}}
                 </td>
-                <td style="padding: 5px;white-space: nowrap; width: 1%;">
+                <td style="padding: 5px;white-space: nowrap; width: 1%;text-align: center;">
                 {{item.price}} pln
                 </td>
-                <td style="padding: 5px;white-space: nowrap; width: 1%;">
+                <td style="padding: 5px;white-space: nowrap; width: 1%;text-align: center;">
                 {{item.time}}
                 </td>		<td style="text-align: center;white-space: nowrap; width: 1%;">
                     {{item.status}}
                     </td>
-    
+                    <td style="padding: 5px;white-space: nowrap; width: 1%; text-align: center;">
+                        <button mat-stroked-button color="basic" (click)="changeStatus(item.id,item.status)">Zmień status</button>
+                    </td>
 	
 
 	

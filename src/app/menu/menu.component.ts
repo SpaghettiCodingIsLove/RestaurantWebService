@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   
 	public data: any;
 	public initialized: boolean = false;  
+  public displayedColumns: string[] = ['id','name', 'description', 'kcal','price','type','alergens','isAvailable','transport'];
 
   constructor(private api:ApiServiceService) { 
   }
@@ -75,4 +76,22 @@ filterData7(){
 })
 }
 
+addProduct(){
+  var json = {
+    "name": (<HTMLInputElement>document.getElementById("name")).value,
+    "description": (<HTMLInputElement>document.getElementById("description")).value,
+    "kcal":(<HTMLInputElement>document.getElementById("kcal")).value,
+    "price": (<HTMLInputElement>document.getElementById("price")).value,
+    "type": (<HTMLInputElement>document.getElementById("type")).value,
+    "alergens": (<HTMLInputElement>document.getElementById("alergens")).value,
+    "isAvailable":true,
+    "transport":true,
+    "image":""
+  }
+  this.api.postAddProduct(json).subscribe(data=>{
+    console.warn(data);
+    this.data=data;
+    this.ngOnInit()
+  })
+  }
 }

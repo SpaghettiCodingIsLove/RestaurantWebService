@@ -1,6 +1,6 @@
-<body style="width: auto;">
+<body>
 
-<div style="padding-top: 75px; margin-left: 27%; margin-right: 17%;" > 
+<div id="filterTabs"> 
 	<button mat-raised-button (click)="filterData1()">Przystawki</button>&nbsp;&nbsp;
 	<button mat-raised-button (click)="filterData2()">Zupy</button>&nbsp;&nbsp;
 	<button mat-raised-button (click)="filterData3()">Danie główne</button>&nbsp;&nbsp;
@@ -12,74 +12,81 @@
 
 	</div>
 <div><br></div>
-<div><button mat-raised-button style="margin-left: 18%;">Dodaj produkt</button></div>
-<div><br></div>
-<table border="1" style="margin-left: auto;
-margin-right: auto;" *ngIf="initialized">
-	<tr>
-		
-		<td style="padding: 5px;">
-		ID
-		</td>
-		<td style="padding: 5px;">
-		Nazwa
-		</td>
-		<td style="padding: 5px;">
-		Opis
-		</td>
-		<td style="padding: 5px;">
-		Kaloryczność
-		</td>
-		<td style="padding: 5px;">
-		Cena
-		</td>
-		<td style="padding: 5px;">
-			Typ dania
+<div id="menuList">
+	<table border="1"  *ngIf="initialized">
+		<tr>
+			
+			<td style="padding: 5px;">
+			ID
 			</td>
-		<td style="padding: 5px;">
-		Alergeny
-		</td>
-		<td style="padding: 5px;">
-		Dostępność
-		</td>
-		<td style="padding: 5px;">
-		Transport
-		</td>
-
-		
-	</tr>
-		<tr *ngFor="let item of data">
-		<td style="text-align: center;">
-		{{item.id}}
-		</td>
-		<td style="padding: 5px;">
-		{{item.name}}
-		</td>
-		<td style="padding: 5px;">
-		{{item.description}}
-		</td>
-		<td style="padding: 5px;">
-		{{item.kcal}}
-		</td>
-		<td style="padding: 5px;">
-		{{item.price}}
-		</td>
-		<td style="padding: 5px;">
-		{{item.type}}
-		</td>
-		<td style="padding: 5px;">
-		{{item.alergens}}
-		</td>	
-		<td style="padding: 5px;">
-		{{item.isAvailable}}
-		
-		</td>
-		<td style="padding: 5px;">
-		{{item.transport}}
-		
-		</td>
+			<td style="padding: 5px;">
+			Nazwa
+			</td>
+			<td style="padding: 5px;">
+			Opis
+			</td>
+			<td style="padding: 5px;">
+			Kaloryczność
+			</td>
+			<td style="padding: 5px;">
+			Cena
+			</td>
+			<td style="padding: 5px;">
+				Typ dania
+				</td>
+			<td style="padding: 5px;">
+			Alergeny
+			</td>
+			<td style="padding: 5px;">
+			Dostępność
+			</td>
+			<td style="padding: 5px;">
+			Transport
+			</td>
 	
-
-	</tr>
-</table>
+			
+		</tr>
+			<tr *ngFor="let item of data">
+			<td style="text-align: center;">
+			{{item.id}}
+			</td>
+			<td style="padding: 5px;">
+			{{item.name}}
+			</td>
+			<td style="padding: 5px;">
+			{{item.description}}
+			</td>
+			<td style="padding: 5px;">
+			{{item.kcal}}
+			</td>
+			<td style="padding: 5px;">
+			{{item.price}}
+			</td>
+			<td style="padding: 5px;">
+			{{item.type}}
+			</td>
+			<td style="padding: 5px;">
+			{{item.alergens}}
+			</td>	
+			<td style="padding: 5px;">
+			{{item.isAvailable}}
+			
+			</td>
+			<td style="padding: 5px;">
+			{{item.transport}}
+			
+			</td>
+    </table>
+</div>
+<div id="addMenu">
+	<h1>Dodaj produkt</h1>
+	<div class='inputField'><p>Nazwa</p><input name="name" type="text" id="name" #name/></div>
+	<div class='inputField'><p>Opis</p><input name="description" type="text"   id="description" #description/></div>
+	<div class='inputField'><p>Kaloryczność</p><input name="kcal" type="number"  min="0" id="kcal" #kcal/></div>
+	<div class='inputField'><p>Cena</p><input name="price" type="number" min="0" step="0.01" id="price" #price/></div>
+	<div class='inputField'><p>Typ dania</p><input type="text" name="type" id="type"  #type/></div>
+	<div class='inputField'><p>Alergeny</p><input type="text" name="alergens" id="alergens"  #alergens/></div>
+	<button mat-stroked-button color="basic" (click)="addProduct()" >Dodaj produkt</button>
+	
+	</div>
 </body>
